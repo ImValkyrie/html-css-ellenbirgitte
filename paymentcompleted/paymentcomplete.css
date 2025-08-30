@@ -6,7 +6,7 @@ body {
 }
 
 
-/* ------ HEADER (Top Bar + Navbar) ------ */
+/* ------ HEADER ------ */
 .top-bar {
   background: #003641;
   color: #fff;
@@ -59,7 +59,7 @@ body {
   user-select: none;
 }
 
-/* ---------- Mobile nav behavior ---------- */
+/* ---------- Mobile nav ---------- */
 @media (max-width: 768px) {
   .hamburger { display: block; }
 
@@ -89,7 +89,7 @@ body {
   }
 }
 
-/* ------ PAYMENT COMPLETED — Card + Layout ------ */
+/* ------ PAYMENT COMPLETED ------ */
 .payment-box {
   max-width: 720px;
   margin: 24px auto 32px;
