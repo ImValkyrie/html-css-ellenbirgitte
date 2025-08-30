@@ -1,0 +1,203 @@
+/* ------ GLOBAL ------*/
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  color: #003641;
+}
+
+/* ------ HEADER ------ */
+.top-bar {
+  background: #003641;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  font-size: 0.7rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.logo img { max-width: 150px; height: auto; display: block; }
+.logo {margin-left: 2rem; padding-top: 20px }
+
+/* --- Icons (login, cart etc.) --- */
+.icon-link {
+  font-size: 1.4rem; color: white;
+  text-decoration: none; transition: color .3s ease;
+  cursor: pointer;
+}
+.icon-link:hover { color: grey; }
+
+.product-image { position: relative; }
+.product-image img {
+  width: 300px; max-width: 100%;
+  height: auto; display: block; object-fit: contain; }
+
+
+/* ---------- Layout frame ---------- */
+
+.checkout-grid{
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 24px;
+}
+
+.checkout-title{
+  text-align:center;
+  font-size: 2rem;
+  margin: 10px 0 24px;
+  color:#003641;
+}
+
+.logo{ padding: 18px 0 6px; }
+.logo a{ display:inline-block; }
+
+/* ---------- Card ---------- */
+
+.card{
+  background:#fff;
+  border:1px solid #cfd8dc;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+/*--------LEFT COLUMN — Shopping bag----------*/
+
+.order-summary.card.bag h2{
+  text-align:center;
+  color: #003641;
+  margin: 6px 0 18px;
+}
+
+.bag-row{
+  display:grid;
+  grid-template-columns: 140px 1fr;
+  gap:16px;
+  align-items:start;
+}
+
+.bag-row .product-image img{
+  width:140px; height:auto; object-fit:contain; display:block;
+}
+
+.brand-link{ color:#003641; font-weight:700; text-decoration:underline; }
+.bag-name{ margin:6px 0 10px; }
+
+.bag-controls{
+  display:flex; gap:12px; flex-wrap:wrap; margin:8px 0 12px;
+}
+.bag-controls .control{ display:flex; gap:8px; align-items:center; }
+.bag-controls select{
+  padding:.35rem .65rem;
+  border:1px solid #b0bec5;
+  border-radius: 999px;
+}
+
+/* Prices */
+.bag-prices{ display:flex; gap:12px; align-items:baseline; }
+.bag-prices .old{ color:gray; text-decoration:line-through; }
+.bag-prices .new{ color:#e53935; font-weight:700; }
+
+/* Promo */
+.promo{ margin:16px 0; }
+.promo p{ margin-bottom:8px; color:#003641; }
+.promo-row{ display:flex; gap:10px; }
+.promo-row input{
+  flex:1; padding:.55rem .7rem; border:1px solid #b0bec5; border-radius:6px;
+}
+.btn-outline{
+  padding:.55rem 1rem; border:1px solid #003641; background:#fff; color:#003641; border-radius:6px; cursor:pointer;
+}
+.btn-outline:hover{ color:grey; }
+
+.sep{ border:none; border-top:1px solid #e0e6ea; margin:16px 0; }
+
+/* Totals */
+.totals{ display:grid; gap:8px; }
+.totals > div{ display:flex; justify-content:space-between; }
+.totals .disc{ color:#e53935; }
+
+.grand{
+  display:flex; justify-content:space-between; align-items:center;
+  border-top:1px solid #e0e6ea; padding-top:12px; margin-top:8px;
+  font-size:1.05rem; font-weight:700;
+}
+
+/* ------RIGHT COLUMN------*/
+
+/* Grid areas */
+.pay-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "ship address"
+    "pay  address";
+  gap:20px;
+  align-items:start;
+}
+
+.pay-grid > .panel:nth-of-type(1){ grid-area: ship; }
+.pay-grid > .panel:nth-of-type(2){ grid-area: pay; }
+.pay-grid > .panel:nth-of-type(3){ grid-area: address; }
+
+.panel h3{ margin:4px 0 12px; color:#003641; }
+
+.pay-grid > .panel:nth-of-type(1),
+.pay-grid > .panel:nth-of-type(2){
+  border-right:1px solid #e0e6ea;
+  padding-right:20px;
+}
+.pay-grid > .panel:nth-of-type(3){
+  border-left:1px solid #e0e6ea;
+  padding-left:20px;
+}
+
+/* Shipping method checkboxes */
+.ship-option{ display:flex; gap:10px; align-items:flex-start; margin:8px 0; }
+.ship-option input{ margin-top:3px; }
+.ship-text small{ margin-left:6px; color:#546e7a; }
+
+/* Payment fields */
+.card-logos{ font-size:1.6rem; color:#003641; display:flex; gap:10px; margin-bottom:10px; }
+.field input{
+  width:100%; padding:.6rem .75rem;
+  border:1px solid #b0bec5; border-radius:6px;
+}
+.row-2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+
+.btn-primary{
+  background:#003641; color:#fff;
+  border:none; border-radius:20px;
+  padding:.20rem 1.2rem; cursor:pointer; margin-top:15px;
+  text-decoration: none;
+}
+.btn-primary:hover{ color: grey; }
+
+/* ------ Responsive ------*/
+@media (max-width: 960px){
+  .checkout-grid{ grid-template-columns: 1fr; }
+  .pay-grid{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "ship"
+      "pay"
+      "address";
+  }
+  .pay-grid > .panel:nth-of-type(1),
+  .pay-grid > .panel:nth-of-type(2){
+    border-right:none; padding-right:0;
+  }
+  .pay-grid > .panel:nth-of-type(3){
+    border-left:none; padding-left:0;
+  }
+}

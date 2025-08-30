@@ -1,0 +1,332 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #002b36;
+}
+
+/* Top Bar */
+.top-bar {
+  background: #003641;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  font-size: 0.9rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+.logo img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Search form */
+.search-form {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 2px 8px;
+  background: #fff;
+}
+
+.search-form input {
+  border: none;
+  outline: none;
+  padding: 5px 8px;
+  font-size: 0.9rem;
+}
+
+.search-form button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #0b3c47;
+}
+
+.search-form button:hover {
+  color: grey; /* hover grey */
+}
+
+/* Icons */
+.icon-link {
+  font-size: 1.4rem;
+  color: #0b3c47;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+  color: grey; /*The icons hover grey*/
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+#menu-toggle {
+  display: none;
+}
+
+
+
+
+/* Products Page Layout */
+.products-page {
+  padding: 2rem;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Product Card */
+.product-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 320px;         /* keeps images uniform */
+  object-fit:contain;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Prices */
+.price {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.price .old {
+  text-decoration: line-through;
+  color: #666;
+  margin-right: 5px;
+}
+
+.price .new {
+  color: red;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.price .discount {
+  color: #666;
+}
+
+/* Button */
+.details-btn {
+  background: #0d3c48;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.details-btn:hover {
+  background: #092d36;
+  color: grey;
+}
+
+/* Sale Badge */
+.sale-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+
+.footer {
+  background: #003641;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;  /* spacing is fine */
+  align-items: flex-start;        /* ✅ align tops, not centers */
+  flex-wrap: wrap;
+  padding: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  gap: 1rem;
+}
+
+
+
+.footer-section p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+
+.footer a {
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.footer img {
+  height: 25px;
+  margin: 0 5px;
+}
+
+.footer-logo {
+  filter: brightness(0) invert(1);
+  width: 120px;
+  height: auto;
+}
+
+.footer-logo img {
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-logo p {
+  font-size: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+.delivery-text {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.payments, .socials {
+  margin: 1rem 0;
+}
+.brand {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.brand span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  /* Top bar stacks */
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  /* Navbar */
+  .search-login {
+    flex-direction: column;
+    width: 100%;
+  }
+  .search-login input {
+    width: 90%;
+  }
+
+  /* Hamburger visible */
+  .hamburger {
+    display: block;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100%;
+  }
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Products stack */
+  .products {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /* Newsletter */
+  .newsletter input {
+    width: 80%;
+    margin-bottom: 0.5rem;
+  }
+  .newsletter button {
+    margin: 0;
+    display: block;
+    width: 50%;
+    margin: 0.5rem auto;
+  }
+
+  /* Footer */
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

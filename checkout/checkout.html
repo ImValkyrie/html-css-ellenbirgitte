@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name ="description" content ="Complete the order of your new jacket from Rainydays here!" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Rainydays - Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../checkout/checkout.css">
+</head>
+<body>
+
+      <!-- Top Bar -->
+  <header class="top-bar">
+        <div class="left">
+    <h1>
+        <a href="/productdetails/productdetails.html" class="icon-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        Continue shopping
+        </a>
+    </h1>
+        </div>
+  </header>
+
+
+    <div class="logo">
+  <a href="/index.html">
+    <img src="../images/RainyDays_Logo.png" alt="Rainydays Logo">
+  </a>
+</div>
+
+  <!-- Checkout content -->
+  <main class="checkout-grid">
+    <!-- LEFT -->
+    <section class="order-summary card bag">
+      <h2>1. Your shopping bag</h2>
+
+      <div class="bag-row">
+        <div class="product-image">
+          <img src="../images/RainyDays_Jacket3.jpg" alt="Rainydays hiking jacket" />
+        </div>
+
+        <div class="bag-info">
+          <a class="brand-link" href="../products/products.html">Rainydays</a>
+          <p class="bag-name">Rainydays hiking jacket - <span>Size: L</span></p>
+
+          <div class="bag-controls">
+            <label class="control">
+              <span>Size</span>
+              <select aria-label="Select size">
+                <option>XS</option>
+                <option>S (Sold out)</option>
+                <option>M</option>
+                <option selected>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+              </select>
+            </label>
+
+            <label class="control">
+              <span>Qty</span>
+              <select aria-label="Select quantity">
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="bag-prices">
+            <span class="old">€ 115</span>
+            <span class="new">€ 80.5</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="promo">
+        <p>Promo code?</p>
+        <div class="promo-row">
+          <input type="text" placeholder="Enter code" aria-label="Promo code" />
+          <button type="button" class="btn-outline">Apply</button>
+        </div>
+      </div>
+
+      <hr class="sep" />
+
+      <div class="totals">
+        <div><span>Subtotal</span><strong>€ 115</strong></div>
+        <div><span>Discount</span><strong class="disc">€ 34.5</strong></div>
+        <div><span>Shipping cost</span><strong>€ 6.9</strong></div>
+      </div>
+
+      <div class="grand">
+        <span>Total price</span>
+        <strong>€ 87.4</strong>
+      </div>
+    </section>
+
+    <!-- RIGHT -->
+    <section class="card pay">
+      <h2>2. Payment method and delivery information</h2>
+
+      <div class="pay-grid">
+        <!-- Shipping method -->
+        <section class="panel">
+          <h3>Shipping method</h3>
+
+          <label class="ship-option">
+            <input type="checkbox" checked />
+            <span class="ship-text">
+              Delivered to nearest postal office
+              <small>(3 - 4 working days)</small>
+            </span>
+          </label>
+
+          <label class="ship-option">
+            <input type="checkbox" />
+            <span class="ship-text">
+              Home delivery <small>(+ € 7.9)</small>
+              <small>(2 - 3 working days)</small>
+            </span>
+          </label>
+        </section>
+
+        <!-- Payment method -->
+        <section class="panel">
+          <h3>Payment method</h3>
+
+          <div class="card-logos" aria-hidden="true">
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+          </div>
+
+          <label class="field">
+            <input type="text" placeholder="Cardholder's name…" aria-label="Cardholder name" />
+          </label>
+
+          <label class="field">
+            <input type="number" placeholder="Card number…" aria-label="Card number" inputmode="numeric" />
+          </label>
+
+          <div class="row-2">
+            <label class="field">
+              <input type="number" placeholder="Expiration date" aria-label="Expiration date" />
+            </label>
+            <label class="field">
+              <input type="number" placeholder="CCV/CVC" aria-label="CCV/CVC" inputmode="numeric" />
+            </label>
+          </div>
+
+          <a href="../payment completed/paymentcomplete.html" class="btn-primary pay-now"> Pay now </a>
+
+        </section>
+
+        <!-- Delivery address -->
+        <section class="panel address">
+          <h3>Delivery address</h3>
+
+          <div class="row-2">
+            <label class="field"><input type="text" placeholder="First name" aria-label="First name" /></label>
+            <label class="field"><input type="text" placeholder="Last name" aria-label="Last name" /></label>
+          </div>
+
+          <label class="field"><input type="email" placeholder="Email" aria-label="Email" /></label>
+
+          <label class="field"><input type="text" placeholder="Street name and number" aria-label="Street" /></label>
+
+          <div class="row-2">
+            <label class="field"><input type="number" placeholder="Zip code" aria-label="Zip code" /></label>
+            <label class="field"><input type="text" placeholder="City" aria-label="City" /></label>
+          </div>
+
+          <label class="field"><input type="tel" placeholder="Phone number" aria-label="Phone number" /></label>
+        </section>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

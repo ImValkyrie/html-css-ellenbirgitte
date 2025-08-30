@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rainydays shoppingcart!">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Rainydays - Shoppingcart</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../shoppingcart/cart.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="top-bar">
+    <div class="left">
+      ★★★★☆ Over 100,000 total recommendations
+    </div>
+    <div class="right">
+      ✓ Free shipping in the EU over 100 euro &nbsp;&nbsp; ✓ Scandinavian quality
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../images/RainyDays_Logo.png" alt="Rainydays Logo">
+      </a>
+    </div>
+
+    <div class="header-actions">
+      <form action="../search.html" method="get" class="search-form">
+        <input type="text" name="q" placeholder="Search..." />
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <a href="../login.html" class="icon-link"><i class="fa-solid fa-user"></i></a>
+      <!-- open side cart -->
+      <a href="#cart" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+  </nav>
+
+  <!-- Product Detail -->
+  <main class="product-detail">
+    <a href="../products/products.html" class="back-link">Go back</a>
+
+    <section class="product-box">
+      <div class="product-image">
+        <img src="../images/RainyDays_Jacket3.jpg" alt="Rainydays hiking jacket">
+        <span class="sale-badge">SALE</span>
+      </div>
+
+      <div class="product-info">
+        <h1 class="brand">Rainydays</h1>
+        <h2 class="product-title">Rainydays hiking jacket</h2>
+
+        <p class="price">
+          <span class="new">€80.5</span> <span class="note">including MVA.</span><br>
+          <span class="old">Original price: <s>€115</s></span>
+          <span class="discount">-30%</span>
+        </p>
+
+        <h3>Description:</h3>
+        <p>
+          A lightweight hiking jacket, perfect for a daily run or if you’re training for a marathon.
+          Rainydays hiking jacket are made of high quality with breathable and sweat-wicking fabrics.
+        </p>
+
+        <h3>Size and fit:</h3>
+        <ul>
+          <li>Slim fit</li>
+          <li>Regular length</li>
+        </ul>
+
+        <h3>Materials:</h3>
+        <p>100% Nylon</p>
+
+        <div class="actions-row">
+          <select aria-label="Choose size">
+            <option selected disabled>Choose size</option>
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+            <option>XXL</option>
+          </select>
+
+          <!-- open side cart -->
+          <a href="#cart" class="btn-add">Add to cart</a>
+        </div>
+
+        <div class="recommend">
+          <p class="muted">You might also like:</p>
+          <div class="rec-grid">
+            <div class="rec-card">
+              <img src="../images/RainyDays_Jacket72.jpg" alt="Warm jacket">
+              <p class="rec-price">€98</p>
+            </div>
+            <div class="rec-card">
+              <img src="../images/RainyDays_Jacket5.jpg" alt="Softshell jacket">
+              <p class="rec-price">€73.78</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-section">
+      <a href="#">Help center</a><br>
+      <a href="#">About us</a>
+    </div>
+    <div class="footer-section">
+      <p>Always safe payments:</p>
+      <i class="fa-brands fa-cc-mastercard"></i>
+      <i class="fa-brands fa-cc-visa"></i>
+    </div>
+    <div class="footer-section">
+      <p>Customer support</p>
+      <i class="fa-solid fa-headset"></i>
+    </div>
+    <div class="footer-logo">
+      <a href="../index.html">
+        <img src="../images/RainyDays_Logo.png" alt="Rainydays Logo">
+      </a>
+    </div>
+
+    <div class="footer-section">
+      <p>We deliver with:</p>
+      <i class="fa-solid fa-truck"></i> UPS Delivery
+    </div>
+    <div class="footer-section footer-legal">
+      <a href="#" class="legal-link">Legal and others</a>
+    </div>
+    <div class="footer-section">
+      <p>Follow us</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =================== -->
+  <!-- CART OVERLAY -->
+  <!-- =================== -->
+  <div id="cart" class="cart-overlay" aria-hidden="true">
+    <!-- blurred background, closes cart when clicked -->
+    <a href="#" class="cart-backdrop" aria-label="Close cart"></a>
+
+    <aside class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <header class="cart-panel__top">
+        <h1 id="cartTitle">Shopping cart</h1>
+        <a href="#" class="cart-close" aria-label="Close">✕</a>
+      </header>
+
+      <div class="cart-items">
+        <article class="cart-item">
+          <img class="cart-item__img" src="../images/RainyDays_Jacket3.jpg" alt="Rainydays hiking jacket">
+          <div class="cart-item__info">
+            <a class="brand-link" href="../index.html">Rainydays</a>
+            <p class="cart-item__title">Rainydays hiking jacket - Size: L</p>
+            <div class="cart-item__controls">
+              <select aria-label="Select size">
+                <option>L</option>
+                <option>XS</option>
+                <option>S (sold out)</option>
+                <option>M</option>
+                <option>XL</option>
+                <option>XXL</option>
+              </select>
+              <select aria-label="Select quantity">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </div>
+          </div>
+          <div class="cart-item__price">
+            <span class="old">€115</span>
+            <span class="new">€80.5</span>
+          </div>
+        </article>
+      </div>
+
+      <footer class="cart-summary">
+        <div class="cart-total">
+          <span>Total:</span> <strong>€80.5</strong>
+        </div>
+        <a href="../checkout/checkout.html" class="btn-checkout">Go to checkout ➜</a>
+      </footer>
+    </aside>
+  </div>
+
+</body>
+</html>
