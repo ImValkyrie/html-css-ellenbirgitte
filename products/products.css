@@ -40,15 +40,6 @@ body {
   gap: 20px;
 }
 
-/* Search form */
-.search-form {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  padding: 2px 8px;
-  background: #fff;
-}
 
 .search-form input {
   border: none;
@@ -104,6 +95,7 @@ body {
   flex-wrap: wrap;
   gap: 2rem;
   align-items: start;
+  justify-content: center;
 }
 
 /* Product Card */

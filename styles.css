@@ -184,7 +184,7 @@ a.btn-add:hover, .btn-add:hover { background: #003641; color: #fff; }
 
 /* --- Recommendations --- */
 .recommend { margin-top: .5rem; display: block; width: 100%; }
-.rec-grid { display: flex; gap: 20px; align-items: flex-start; }
+.rec-grid { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap;}
 .rec-card { width: 180px; text-align: center; }
 .rec-card img {
   display: block; width: 180px; height: 200px;
