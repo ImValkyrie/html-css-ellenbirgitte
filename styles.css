@@ -1,10 +1,25 @@
-/* ------ Global ------*/
+/* ---------- Reset / Base ---------- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { height: 100%; }
+
 body {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #003641;
+  background: #fff;
 }
+
+main, .product-grid, .products-page { flex: 1; }
+
+
+main {
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center; }
 
 /* ------ HEADER (Top Bar + Navbar) ------ */
 .top-bar {

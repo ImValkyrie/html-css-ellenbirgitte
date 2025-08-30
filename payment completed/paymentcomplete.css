@@ -5,17 +5,6 @@ body {
   flex-direction: column;
 }
 
-/* whichever wrapper holds your content */
-main, .product-grid, .products-page { flex: 1; }
-
-
-
-main {
-flex: 1;
-display: flex;
-flex-direction: column;
-align-items: center; }
-
 
 /* ------ HEADER (Top Bar + Navbar) ------ */
 .top-bar {

@@ -100,8 +100,7 @@ body {
 }
 
 .products-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
   gap: 2rem;
   align-items: start;
 }
@@ -114,11 +113,12 @@ body {
   padding: 1rem;
   text-align: center;
   border-radius: 8px;
+  margin: 0 2rem;
 }
 
 .product-card img {
   width: 100%;
-  height: 320px;         /* keeps images uniform */
+  height: 320px;
   object-fit:contain;
   margin-bottom: 1rem;
 }
