@@ -180,10 +180,16 @@ a.btn-add:hover, .btn-add:hover { background: #003641; color: #fff; }
 
 /* ------ FOOTER ------ */
 .footer {
-  background: #003641; color: #fff;
-  display: flex; justify-content: space-evenly; align-items: flex-start;
-  flex-wrap: wrap; padding: 1rem; font-size: .9rem;
-  text-align: center; gap: 1rem;
+  background: #003641; 
+  color: #fff;
+  display: flex; 
+  justify-content: space-evenly; 
+  align-items: flex-start;
+  flex-wrap: wrap; 
+  padding: 1rem;
+  font-size: .9rem;
+  text-align: center;
+  gap: 1rem;
 }
 
 .footer-section p { margin: 0; line-height: 1.4; }
