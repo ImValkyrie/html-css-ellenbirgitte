@@ -1,6 +1,5 @@
 /* CART OVERLAY */
 
-/* Wrapper hidden by default */
 .cart-overlay{
   position: fixed;
   inset: 0;
